@@ -96,7 +96,7 @@ def loadjson():
     global IMDB_SHOWS
     
     #loads IMDB_SHOWS
-    with open('C:/Users/josh/Documents/coding/moviesite/newdb_data/shows_asdict_updated.txt','rb') as outfile:
+    with open('C:/Users/josh/Documents/coding/django_stuff/imdb_guide/database/shows_asdict_updated.txt','rb') as outfile:
         IMDB_SHOWS=json.load(outfile)
    
         
