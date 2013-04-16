@@ -1,0 +1,242 @@
+
+/*
+*********************
+*=grid overrides
+*********************
+*/
+
+.grid_3{margin-left: 60px;}
+
+
+/*
+*********************
+*=miscellaneous
+*********************
+*/
+.selected{
+	font-weight: bold;
+	color: black;
+}
+.container_24{
+	margin-top: 10px;
+}
+
+p{
+	font-size: 13px;
+	line-height: 20px;
+	color: black;
+}
+
+blockquote,blockquote p{
+	font-size: 15px;
+	line-height: 20px;
+	font-style: italic;
+	color: #0e0e0e;
+	position: relative;
+}
+
+
+h1,h2{
+	letter-spacing: -1px;
+	text-transform: lowercase;
+}
+
+
+h3{
+	font-size: 26px;
+	text-transform: lowercase;
+	border-bottom: 1px solid #d1d1d1;
+	padding-bottom: 24px;
+	margin-bottom: 15px;
+	line-height: 1em;
+}
+
+a{
+	color: #7e7e7e;
+	text-decoration: none;
+}
+
+a:hover{
+	color: black;
+}
+
+li{
+	margin-left: 24px;
+}
+
+.button{
+	background: black;
+	padding: 6px;
+	text-transform: uppercase;
+	color: white;
+	font-size: 11px;
+
+}
+
+.button:hover{
+	background: gray;
+	color: white;
+}
+/*
+*********************
+*=header
+*********************
+*/
+
+header{
+	overflow: hidden;
+}
+
+header h1{
+	width: 174px;
+	height: 23px;
+	margin: 10px 10px 23px;
+	float: left;
+	
+}
+
+
+/*
+*********************
+*=nav
+*********************
+*/
+
+nav{
+	float: right;
+	padding-top: 19px;
+
+}
+nav li{
+
+	display: inline;
+}
+
+nav a{
+	text-transform: lowercase;
+}
+/*
+*********************
+*=banner
+*********************
+*/
+
+.banner{
+	background: url(../img/penguins2.jpg) no-repeat;
+	width: 695px;
+	height: 232px;
+	clear: both;
+	position: relative;
+	
+}
+
+.callout{
+	background: black;
+	height: 231px;
+	margin-left: 60px;
+
+}
+
+.banner h2{
+	color: white;
+	font-size: 28px;
+	width: 400px;
+	font-weight: normal;
+	position: absolute;
+	bottom: -10px;
+	left:8px;
+	padding: 0px,8px;
+	background: rgba(0,0,0,.4);
+
+
+
+
+}
+
+
+
+/*
+*********************
+*=main
+*********************
+*/
+
+.main{
+	margin-top: 20px;
+}
+
+.main blockquote p{
+	padding-left: 30px;
+}
+
+
+
+.main blockquote p:after,
+.main blockquote p:before{
+	font-size: 40px;
+	color: #bfbfbf;
+	font-style: italic;
+}
+
+
+
+.main blockquote p:first-child:before{
+	content: '“';
+	position: absolute;
+	top:5px;
+	left:0;
+}
+.main blockquote p:last-child:after{
+	content: '”';
+	float: right;
+	position: absolute;
+	bottom: -7px;
+	right: 0;
+
+}
+
+
+
+/*
+*********************
+*=footer
+*********************
+*/
+
+footer{
+	clear: both;
+	border-top: 1px solid #d1d1d1;
+	padding-top:18px;
+	margin-top: 100px;
+}
+
+/*
+*********************
+*=work
+*********************
+*/
+
+
+.work h2,
+.work h4{
+		font-size: 26px;
+		font-weight:normal;
+}
+
+.work h2{
+
+	margin-bottom: 0px;
+}
+.work img{
+	margin-bottom: 20px;
+	width: 344px;
+	height: 200px;
+}
+
+.work h4{
+	color:#787878;
+	line-height: 1.2em;
+	border-bottom: 1px solid #d1d1d1;
+	padding-bottom: 33px;
+	margin-bottom: 30px;
+}

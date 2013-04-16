@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+{% load dajaxice_templatetags %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Find Tv By Ratings</title>
+	<link rel="stylesheet" href="../static/css/reset.css">
+	<link rel="stylesheet" href="../static/css/text.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}django_tables2/themes/paleblue/css/screen.css" >
+	<link rel="stylesheet" href="../static/css/960_24_col.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style3.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery-ui-1.10.2.custom.min.css">
+  <script src='{{ STATIC_URL }}js/jquery-1.9.1.min.js'> </script>
+  <script src='{{ STATIC_URL }}js/jquery-ui-1.10.2.custom.min.js'> </script>
+  <script src='{{ STATIC_URL }}js/jquery.multiselect.js'> </script>
+  <script src='{{ STATIC_URL }}js/testingjs.js'> </script>
+
+</head>
+
+<div class='container_24'>
+<body>
+<div class="grid_10">
+<div clear>
+</div>
+
+<div id="site_title">
+  <h1>
+    <a href="/home"><span class="i">tv</span>byrati<span class="n">ngs</span>.com</a>
+  </h1>
+</div>
+
+</div>
+<div class="grid_14">
+   <div id="error_zipform"></div>
+  <div class="zip_form">
+
+
+<form id="simple_form" action=''><input id="simple_zip" name="simple_zip" type="text" value="Enter 5 digit Zip"/></form>
+
+<form id="selectmeform" action="/entered" method="get">
+<select id="selectme" selected="">
+
+<option value="">Select Provider</option>            
+</select>
+             
+
+</form>
+</div>
+
+</div>
+
+<div clear></div>
+
+
+
+
+<div id="header">
+  <div id="topNav">
+      <a href="/home">home</a> 
+      <a href="/about">about</a> 
+      <a href="/contact">contact</a> 
+      <a href="/ondemand">ondemand</a> 
+      <a href="/guide">guide</a> 
+
+
+      <form id="channelform" action="" method="get">
+      <select id="channels" name="channels" multiple="multiple">
+      <option value="HBO">HBO</option>
+      <option value="MAX">MAX</option>
+      <option value="SHO">SHO</option>
+      <option value="Starz">Starz</option>
+      <option value="Encore">Encore</option>
+      </select>
+      </form>
+
+      <form id="typeform" action="" method="get">
+      <select id="type" name="type" multiple="multiple">
+      <option value="Movie">Movies</option>
+      <option value="Tv">TV</option>
+      </select>
+      </form>
+
+  </div>
+</div>
+
+
+<div class="main clearfix">
+
+<div id='intro'>
+    {% block intro %}
+    <h2>Enter your zip to find the best stuff on tv</h2>
+    {{message}}  
+    {% endblock %}
+</div>
+<p>
+<div id='loading_message'></div>
+</p>
+
+<div id="content">
+    {% block content %}
+    {{message}}
+    {% endblock %}
+</div>
+
+</div>
+</div>
+</body>
+</div>
+</html>
+
+	

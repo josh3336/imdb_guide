@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+
+{% block intro %}
+  <h3>Best titles on tv by imdb score</h3>
+  <p>It is now {{ current_date }}.</p>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+	<h3>Best Shows before {{list_of_hours.0}} still running</h3>
+	{% render_table table1 %}
+
+	<h3>Best Shows starting at {{list_of_hours.0}}</h3>
+	{% render_table table2 %}
+
+	<h3>Best Shows starting at {{list_of_hours.1}}</h3>
+	{% render_table table3 %}
+
+	<h3>Best Shows starting at {{list_of_hours.2}}</h3>
+	{% render_table table4 %}
+
+	<h3>Best Shows starting at {{list_of_hours.3}}</h3>
+	{% render_table table5 %}
+
+
+    <p>Thanks for visiting my site.</p>
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% load render_table from django_tables2 %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Home Page</title>
+	<link rel="stylesheet" href="../static/css/reset.css">
+	<link rel="stylesheet" href="../static/css/text.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style3.css">
+	<link rel="stylesheet" href="../static/css/960_24_col.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}django_tables2/themes/paleblue/css/screen.css" >
+	
+
+</head>
+<body>
+<div class="main clearfix">
+<div class="grid_6">
+    <h1>Find Imdb's highest rated shows currently on tv </h1>
+    <p>It is now {{ current_date }}.</p>
+    <hr>
+    <form action="/entered/" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Enter a Zip">
+    </form>
+
+
+
+
+</div>
+<p>{{STATIC_URL}}</p>
+
+
+<div class="grid_4">
+
+	<h3>Best Shows Currently On</h3>
+	{% render_table table1 %}
+
+	<h3>Best Shows for {{list_of_hours.0}}</h3>
+	{% render_table table2 %}
+
+	<h3>Best Shows for {{list_of_hours.1}}</h3>
+	{% render_table table3 %}
+
+	<h3>Best Shows for {{list_of_hours.2}}</h3>
+	{% render_table table4 %}
+
+	<h3>Best Shows for {{list_of_hours.3}}</h3>
+	{% render_table table5 %}
+
+
+    <p>Thanks for visiting my site.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+
+{%block intro%}
+{%endblock%}
+
+{% block content %}
+
+
+	<h3>Best titles on demand</h3>
+	{% render_table table1 %}
+
+
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+
+
+{% block content %}
+
+<form action="/contact/" method="post">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
+
+
+{% endblock %}

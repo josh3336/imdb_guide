@@ -1,0 +1,67 @@
+
+body {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
+}
+.container {
+    background: none repeat scroll 0 0 transparent;
+}
+hr {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border: medium none;
+    color: #CCCCCC;
+    height: 2px;
+    margin: 2em 0;
+    padding: 0;
+    width: 100%;
+}
+hr.space {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #FFFFFF;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Arial,"Lucida Grande",sans-serif;
+}
+code {
+    font: 0.9em "Courier New",Monaco,Courier,monospace;
+}
+img {
+    float: left;
+    margin: 1.5em 1.5em 1.5em 0;
+}
+a img {
+    border: medium none;
+}
+p img.top {
+    margin-top: 0;
+}
+blockquote {
+    font-size: 0.9em;
+    font-style: italic;
+    margin: 1.5em;
+    padding: 1em;
+}
+.small {
+    font-size: 0.9em;
+}
+.large {
+    font-size: 1.1em;
+}
+.quiet {
+    color: #999999;
+}
+.hide {
+    display: none;
+}
+a:link, a:visited {
+    background: none repeat scroll 0 0 transparent;
+    font-weight: 700;
+    text-decoration: underline;
+}
+a:link:after, a:visited:after {
+    content: " (" attr(href) ") ";
+    font-size: 90%;
+}
