@@ -10,46 +10,35 @@
 	<link rel="stylesheet" href="../static/css/960_24_col.css">
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/style3.css">
   <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery-ui-1.10.2.custom.min.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery-ui-1.10.2.custom.min.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-responsive.min.css">
+
+
   <script src='{{ STATIC_URL }}js/jquery-1.9.1.min.js'> </script>
   <script src='{{ STATIC_URL }}js/jquery-ui-1.10.2.custom.min.js'> </script>
   <script src='{{ STATIC_URL }}js/jquery.multiselect.js'> </script>
   <script src='{{ STATIC_URL }}js/testingjs.js'> </script>
+  <script src='{{ STATIC_URL }}js/jquery.dajax.core.js'> </script>
+  <script src='{{ STATIC_URL }}js/bootstrap.min.js'> </script>
+
 
 </head>
 
+
 <div class='container_24'>
 <body>
-<div class="grid_10">
-<div clear>
-</div>
 
-<div id="site_title">
-  <h1>
-    <a href="/home"><span class="i">tv</span>byrati<span class="n">ngs</span>.com</a>
-  </h1>
-</div>
-
-</div>
-<div class="grid_14">
-   <div id="error_zipform"></div>
   <div class="zip_form">
-
-
-<form id="simple_form" action=''><input id="simple_zip" name="simple_zip" type="text" value="Enter 5 digit Zip"/></form>
-
-<form id="selectmeform" action="/entered" method="get">
-<select id="selectme" selected="">
-
-<option value="">Select Provider</option>            
-</select>
-             
-
-</form>
+    <form id="simple_form" action=''><input id="simple_zip" name="simple_zip" type="text" value="Enter 5 digit Zip"/></form>
+      <form id="selectmeform" action="/entered" method="get">
+        <select id="selectme" selected="">
+          <option value="">Select Provider</option>
+        </select>
+    </form>  
+  <span id="error_zipform"></span>
 </div>
 
-</div>
-
-<div clear></div>
 
 
 
@@ -93,7 +82,10 @@
     {% endblock %}
 </div>
 <p>
-<div id='loading_message'></div>
+  <div id='loading_message'></div>
+  <div class='loading-indicator'>
+    <img src="{{ STATIC_URL }}css/img/ajax-loader.gif" id="loading-indicator" style="display:none" />
+  </div>
 </p>
 
 <div id="content">

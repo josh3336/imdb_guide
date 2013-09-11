@@ -51,7 +51,7 @@ $('#simple_zip').change(function(){
 
 	var re5digit=/^\d{5}$/;
 	if (x.search(re5digit)==-1){
-	  	document.getElementById('error_zipform').innerHTML='Enter a valid 5 digit zip';
+	  	document.getElementById('error_zipform').innerHTML='Invalid Zip';
 	 	return false;
 	  };
 	  $("#error_zipform").html('')
@@ -91,15 +91,16 @@ $("input").bind("keydown", function(event) {
 //submits selectme form when changed and puts a loading message in the content part of the page
 $(function() {
     $('#selectme').change(function() {
-
-        $('#loading_message').html('')
+        $('#loading-indicator').show();
+        $('#loading_message').html('');
         //var zip_head={zipcode:$('#simple_zip').val(),headend:$('#selectme').val()}
-        zipcode=$('#simple_zip').val()
-        headend=$('#selectme').val()
+        zipcode=$('#simple_zip').val();
+        headend=$('#selectme').val();
         var input = $("<input>").attr("type", "hidden").attr("name", "zipcode").val(zipcode);
         $('#selectmeform').append($(input));
         var input = $("<input>").attr("type", "hidden").attr("name", "headend").val(headend);
         $('#selectmeform').append($(input));
+        document.cookie = "time_sec="+Math.round(+new Date()/1000);
         string="Your tv guide is being loaded and processed, your content will be displayed within 30 seconds."
         $('#loading_message').append(string);
         $('#selectmeform').submit()
@@ -143,7 +144,7 @@ $(document).ready(function(prmstr){
 
 //used with jquery multiselect plugin, submits typeform
 $(document).ready(function(prmstr){
-  var checkforchange=0
+  var checkforchange=0;
    $("#type").multiselect({
     noneSelectedText: "show all",
     header: "Show Only:",
@@ -185,7 +186,7 @@ $(document).ready(function(prmstr){
 //checks to see if item is  selected for channels if so it checks it 
 $(document).ready(function(){
     for (var i = 0; i < prmarr.length; i++){
-      splitequal=prmarr[i].split('=')
+      splitequal=prmarr[i].split('=');
       if (splitequal[0]=="channels"){
       $('#channels option[value="'+splitequal[1]+'"]').attr('selected', 'true');
     };
@@ -195,7 +196,7 @@ $(document).ready(function(){
 //checks to see if item is selected for type if so it checks it 
 $(document).ready(function(){
     for (var i = 0; i < prmarr.length; i++){
-      splitequal=prmarr[i].split('=')
+      splitequal=prmarr[i].split('=');
       if (splitequal[0]="type"){
       $('#type option[value="'+splitequal[1]+'"]').attr('selected', 'true');
     };
@@ -206,11 +207,11 @@ $(document).ready(function(){
 
 //refreshes multiselect so checkmarks show up
 $(document).ready(function(){
- $("#channels").multiselect("refresh")
+ $("#channels").multiselect("refresh");
  });
 
 $(document).ready(function(){
- $("#type").multiselect("refresh")
+ $("#type").multiselect("refresh");
  });
 
 

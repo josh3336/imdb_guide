@@ -20,6 +20,7 @@ def guide(request, *args):
     """provides all guide content in 5 tables
 
     """
+    print request
     channels_filtered=request.GET.getlist('channels')
     now = datetime.today()
     hour=now.hour
@@ -103,6 +104,9 @@ def ondemand(request):
 def guide_filtered(request):
     """provides guide content which is filtered by channel, showtype and cookies
     """
+    token=request.COOKIES['csrftoken']
+    print "Cookies!!!!!!!!!!!!!!!!!!!!!"
+    print request.COOKIES
     channels_list=["HBO","MAX","SHO","Starz","Encore"]
     channels_filtered=request.GET.getlist('channels')
 
@@ -118,7 +122,12 @@ def guide_filtered(request):
     for a in channels_filtered:
         channels_list.pop(channels_list.index(a))
 
-    token=request.COOKIES['csrftoken']
+    print 'DATETIME'
+    print datetime
+    print 'Timesec'
+    print 'converted time'
+    
+    #now = datetime.fromtimestamp(time_sec).today()
     now = datetime.today()
     hour=now.hour
     minutes=now.minute

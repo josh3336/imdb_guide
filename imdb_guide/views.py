@@ -16,8 +16,9 @@ import sys
 
 #import pickle
 #sys.path.append('C:/Users/josh/Documents/coding/django_stuff/imdb_guide/helperfunctions')
-sys.path.append('C:/Users/josh/Documents/coding/django_stuff/imdb_guide/static/python')
+#sys.path.append('C:/Users/josh/Documents/coding/django_stuff/imdb_guide/static/python')
 #sys.path.append('C:/Users/josh/Documents/coding/moviesite/main_scripts/')
+sys.path.append('/Users/hackreactor/code/josh3336/imdb_guide/static/python')
 import imdbwithguide
 import tvguide_helperfunctions
 
@@ -50,6 +51,7 @@ def entered(request):
     """Called when user selects a provider. This uses the input to run a script which adds a specific tv guide to
     the database, then redirects the page to /guide
     """
+    
     zipcode=request.GET['zipcode']
     headend=request.GET['headend']
     channel_filter=request.GET

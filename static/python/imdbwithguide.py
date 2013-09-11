@@ -96,7 +96,7 @@ def loadjson():
     global IMDB_SHOWS
     
     #loads IMDB_SHOWS
-    with open('C:/Users/josh/Documents/coding/django_stuff/imdb_guide/database/shows_asdict_updated.txt','rb') as outfile:
+    with open('/Users/hackreactor/code/josh3336/imdb_guide/database/shows_asdict_updated.txt','rb') as outfile:
         IMDB_SHOWS=json.load(outfile)
    
         
@@ -258,7 +258,7 @@ def check_guide(hashed):
 def main(zip,headend,token):
     loadjson()
 
-    totalguide=findguide_byzip(zip,headend, 12)
+    totalguide=findguide_byzip(zip,headend, 7)
     parse_guide(totalguide,zip,headend)
     condense_guide()
 
